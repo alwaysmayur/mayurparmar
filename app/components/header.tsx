@@ -28,7 +28,7 @@ export default function Header() {
   }, [isSidebarOpen]);
 
   return (
-    <header>
+    <header className="bg-bgDark">
       <nav className="bg-bgDark  text-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         {/* <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a href="https://flowbite.com" className="flex items-center">
@@ -145,7 +145,7 @@ export default function Header() {
               />
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex bg-bgDark lg:hidden">
             <button onClick={openSidebar}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
