@@ -134,7 +134,7 @@ export default function Header() {
             </ol>
           </div>
         </div> */}
-        <div className="flex w-full py-3 px-3 content-center items-center justify-between">
+        <div className="flex bg-bgDark w-full py-3 px-3 content-center items-center justify-between">
           <div className="log">
             <a href="">
               <Image

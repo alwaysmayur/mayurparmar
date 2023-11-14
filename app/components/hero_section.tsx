@@ -19,7 +19,7 @@ export default function HeroSection() {
           <div className="bg-gradient-to-t from-indigo-500 via-sky-500 to-purple-800 rounded-lg  w-[3px] h-full mx-auto"></div>
         </div> */}
 
-        <div className="mt-14 pb-20 md:pb-0 mb-24 flex justify-start h-full flex-col w-full">
+        <div className="mt-28 md:mt-14 pb-20  md:pb-0 mb-24 flex justify-start h-full flex-col w-full">
           <span className=" font-roboto font-normal line-height-8 text-textBlue text-xl">
             Hi, my name is
           </span>
