@@ -4,6 +4,7 @@ export default function Contact() {
   useEffect(() => {
     AOS.refresh();
   }, []);
+  
   return (
     <div className="container" id="contact">
       <div className=" flex justify-start w-full ">
@@ -59,6 +60,8 @@ export default function Contact() {
             Say Hello
           </a>
         </div>
+
+        
       </div>
     </div>
   );

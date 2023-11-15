@@ -38,7 +38,10 @@ export default function Header() {
                 width={50}
                 height={50}
                 alt="logo"
+                data-aos="fade-up"
+                data-aos-duration="1000"
               />
+              
             </a>
           </div>
           <div className="flex bg-bgDark md:hidden">
@@ -93,9 +96,9 @@ export default function Header() {
             </Link>
           </div>
 
-          <aside
+          <aside style={{ zIndex: 1 }}
             tabIndex={1}
-            className={`lg:hidden w-9/12 fixed z-99 inset-y-0 right-0 bg-bgNav text-white p-8  ${
+            className={`lg:hidden w-9/12 fixed z-1 inset-y-0 right-0 bg-bgNav text-white p-8  ${
               isSidebarOpen ? "" : "hidden"
             }`}
           >
@@ -121,35 +124,38 @@ export default function Header() {
             <nav className="flex justify-center content-center items-center h-full">
               <div className="flex flex-col">
                 <Link href="#about">
-                  <div onClick={closeSidebar} className="flex content-center flex-col items-center space-x-2 mr-5 pb-5">
+                  <div
+                    onClick={closeSidebar}
+                    className="flex content-center flex-col items-center space-x-2 mr-5 pb-5"
+                  >
                     <span className="text-textBlue  line-height-8 font-mono ">
                       01.
                     </span>
-                    <span  className=" font-smeibold">
-                      About
-                    </span>
+                    <span className=" font-smeibold">About</span>
                   </div>
                 </Link>
 
                 <Link href="#experience">
-                  <div onClick={closeSidebar} className="flex content-center flex-col items-center space-x-2 mr-5 pb-5">
+                  <div
+                    onClick={closeSidebar}
+                    className="flex content-center flex-col items-center space-x-2 mr-5 pb-5"
+                  >
                     <span className="text-textBlue  line-height-8 font-mono ">
                       02.
                     </span>
-                    <span  className=" font-smeibold">
-                      Experience
-                    </span>
+                    <span className=" font-smeibold">Experience</span>
                   </div>
                 </Link>
 
                 <Link href="#contact">
-                  <div  onClick={closeSidebar} className="flex content-center flex-col items-center space-x-2 mr-5 pb-5">
+                  <div
+                    onClick={closeSidebar}
+                    className="flex content-center flex-col items-center space-x-2 mr-5 pb-5"
+                  >
                     <span className="text-textBlue  line-height-8 font-mono ">
                       03.
                     </span>
-                    <span  className=" font-smeibold">
-                      Contact
-                    </span>
+                    <span className=" font-smeibold">Contact</span>
                   </div>
                 </Link>
               </div>

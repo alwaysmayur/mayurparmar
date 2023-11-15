@@ -48,7 +48,7 @@ export default function Home() {
           <div className="mt-5 bg-gradient-to-t from-textGray via-textGray to-textGray rounded-lg  w-[3px] h-36 mx-auto"></div>
         </div>
       </div>
-      <div className="flex min-h-screen bg-bgDark text-white flex-col items-center justify-between p-8 md:px-32 md:py-14">
+      <div className="flex z-0 min-h-screen bg-bgDark text-white flex-col items-center justify-between p-8 md:px-32 md:py-14">
         <HeroSection />
         <AboutMe />
         <Experience />
