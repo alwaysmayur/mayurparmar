@@ -1,3 +1,5 @@
+"use client"
+import {useEffect} from "react"
 import HeroSection from "./components/hero_section";
 import AboutMe from "./components/about_me";
 import Experience from "./components/experience";
@@ -7,7 +9,15 @@ import { LuLinkedin } from "react-icons/lu";
 import { SlSocialInstagram } from "react-icons/sl";
 import { LuGithub } from "react-icons/lu";
 import Footer from "./components/footer";
+import AOS from 'aos';
 export default function Home() {
+  useEffect(() => {
+    // Initialize AOS when the component mounts
+    AOS.init({
+      duration: 800, // Set the default duration of AOS animations
+    });
+ 
+  }, []);
   return (
     <>
       <Header />
@@ -38,7 +48,7 @@ export default function Home() {
           <div className="mt-5 bg-gradient-to-t from-textGray via-textGray to-textGray rounded-lg  w-[3px] h-36 mx-auto"></div>
         </div>
       </div>
-      <div className="flex min-h-screen bg-bgDark text-white flex-col items-center justify-between p-5 md:px-32 md:py-14">
+      <div className="flex min-h-screen bg-bgDark text-white flex-col items-center justify-between p-8 md:px-32 md:py-14">
         <HeroSection />
         <AboutMe />
         <Experience />

@@ -1,5 +1,10 @@
+import { useEffect } from "react";
+import AOS from "aos";
 import Image from "next/image";
 export default function Experience() {
+  useEffect(() => {
+    AOS.refresh();
+  }, []);
   return (
     <div className="container" id="experience">
       <div className="flex justify-start w-full">
@@ -22,7 +27,10 @@ export default function Experience() {
         </div> */}
 
         <div className="py-16 mb-20 px-5 flex justify-start h-full flex-col w-full">
-          <div className="heading justify-start content-center items-center flex text-3xl ">
+          <div
+            data-aos="fade-up"
+            className="heading justify-start content-center items-center flex text-3xl "
+          >
             <span className="font-mono font-thin text-textBlue">02.</span>
             <h2 className="mx-3 font-semibold font-noto text-headGray ">
               Experience
@@ -31,7 +39,10 @@ export default function Experience() {
           </div>
           <div className=" mt-10 lg:w-4/5 block text-textGray  text-md justify-between">
             <div className="heading pb-5">
-              <h3 className="font-semibold  text-headGray text-xl">
+              <h3
+                data-aos="fade-up"
+                className="font-semibold  text-headGray text-xl"
+              >
                 Fullstack Developer
                 <a
                   className="text-textBlue"
@@ -41,14 +52,19 @@ export default function Experience() {
                   {`  @ fotonVR`}
                 </a>
               </h3>
-              <span className="font-code">May 2023 - Present</span>
+              <span data-aos="fade-up" className="font-code">
+                May 2023 - Present
+              </span>
             </div>
 
             <div className="comp-1">
-              <h3 className="font-semibold  pb-5 text-textGray text-lg">
+              <h3
+                data-aos="fade-up"
+                className="font-semibold  pb-5 text-textGray text-lg"
+              >
                 fotonVR website
               </h3>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>
@@ -58,7 +74,7 @@ export default function Experience() {
                   Next.js for seamless client-side rendering.
                 </span>
               </div>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>
@@ -68,22 +84,25 @@ export default function Experience() {
                   devices.
                 </span>
               </div>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>
                 <span>
                   Integrated dynamic content through MongoDB to provide
-                  real-time updates on the website, showcasing the company &apos s
-                  projects, achievements, and values.
+                  real-time updates on the website, showcasing the company &apos
+                  s projects, achievements, and values.
                 </span>
               </div>
             </div>
             <div className="comp-1">
-              <h3 className="font-semibold pb-5  text-textGray text-lg">
+              <h3
+                data-aos="fade-up"
+                className="font-semibold pb-5  text-textGray text-lg"
+              >
                 Task Management Module
               </h3>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>
@@ -93,7 +112,7 @@ export default function Experience() {
                   experience and visual interface.
                 </span>
               </div>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>
@@ -103,7 +122,7 @@ export default function Experience() {
                   task data retrieval and updates.
                 </span>
               </div>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>
@@ -117,7 +136,10 @@ export default function Experience() {
           </div>
           <div className=" mt-10 lg:w-4/5  block text-textGray text-md justify-between">
             <div className="heading pb-5">
-              <h3 className="font-semibold  text-headGray text-xl">
+              <h3
+                data-aos="fade-up"
+                className="font-semibold  text-headGray text-xl"
+              >
                 Junior Developer
                 <a
                   className="text-textBlue"
@@ -127,13 +149,18 @@ export default function Experience() {
                   {`   @ Squad Technologies`}
                 </a>
               </h3>
-              <span className="font-code">Fab 2022 - May 2023</span>
+              <span data-aos="fade-up" className="font-code">
+                Fab 2022 - May 2023
+              </span>
             </div>
             <div className="comp-1">
-              <h3 className="font-semibold pb-5  text-textGray text-lg">
+              <h3
+                data-aos="fade-up"
+                className="font-semibold pb-5  text-textGray text-lg"
+              >
                 Hubspot API Integration
               </h3>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>
@@ -142,7 +169,7 @@ export default function Experience() {
                   functionalities and streamline business processes.
                 </span>
               </div>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>
@@ -152,7 +179,7 @@ export default function Experience() {
                   platforms.
                 </span>
               </div>
-              <div className="flex items-start pb-5 ">
+              <div data-aos="fade-up" className="flex items-start pb-5 ">
                 <span className="text-textBlue text-lg line-height-8 mr-5">
                   ▹
                 </span>

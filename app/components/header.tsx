@@ -41,7 +41,7 @@ export default function Header() {
               />
             </a>
           </div>
-          <div className="flex bg-bgDark lg:hidden">
+          <div className="flex bg-bgDark md:hidden">
             <button onClick={openSidebar}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <div className="hidden lg:flex  text-md text-textGray">
+          <div className="hidden md:flex  text-md text-textGray">
             {/* <div className="flex items-center space-x-2 mr-5">
               <span className="text-textBlue  line-height-8 font-mono ">03.</span>
               <span  className=" font-smeibold">Work</span>
