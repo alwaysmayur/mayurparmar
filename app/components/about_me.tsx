@@ -111,7 +111,7 @@ export default function AboutMe() {
             <div className="w-full lg:w-[35%] mx-auto lg:mx-5 py-14 lg:py-0 flex flex-col content-center items-center">
               <div data-aos="flip-right" className="relative group">
                 <Image
-                  src="/media/images/profile-pic-(7).png"
+                  src="/media/images/mayur.jpg"
                   className="rounded-md relative z-10 transition-transform duration-300 transform-gpu group-hover:-translate-x-1 group-hover:-translate-y-1 filter grayscale group-hover:filter-none"
                   width={300}
                   height={300}
