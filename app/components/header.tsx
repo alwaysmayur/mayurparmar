@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { navLinks } from "@/public/data";
+
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -29,7 +31,7 @@ export default function Header() {
 
   return (
     <header className="bg-bgDark">
-      <nav className="bg-bgDark ">
+      <nav className="bg-bgDark">
         <div className="flex bg-bgDark w-full py-3 px-3 content-center items-center justify-between">
           <div className="log">
             <a href="">
@@ -41,7 +43,6 @@ export default function Header() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               />
-              
             </a>
           </div>
           <div className="flex bg-bgDark md:hidden">
@@ -62,43 +63,23 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <div className="hidden md:flex  text-md text-textGray">
-            {/* <div className="flex items-center space-x-2 mr-5">
-              <span className="text-textBlue  line-height-8 font-mono ">03.</span>
-              <span  className=" font-smeibold">Work</span>
-            </div> */}
-
-            <Link href="#about">
-              <div className="flex items-center space-x-2 mr-5">
-                <span className="text-textBlue  line-height-8 font-mono ">
-                  01.
-                </span>
-                <span className=" font-smeibold">About </span>
-              </div>
-            </Link>
-
-            <Link href="#experience">
-              <div className="flex items-center space-x-2 mr-5">
-                <span className="text-textBlue  line-height-8 font-mono ">
-                  02.
-                </span>
-                <span className=" font-smeibold">Experience</span>
-              </div>
-            </Link>
-
-            <Link href="#contact">
-              <div className="flex items-center space-x-2 mr-5">
-                <span className="text-textBlue  line-height-8 font-mono ">
-                  03.
-                </span>
-                <span className=" font-smeibold">Contact</span>
-              </div>
-            </Link>
+          <div className="hidden md:flex text-md text-textGray">
+            {navLinks.map(({ label, href, index }) => (
+              <Link key={index} href={href}>
+                <div className="flex items-center space-x-2 mr-5">
+                  <span className="text-textBlue line-height-8 font-mono">
+                    {index < 10 ? `0${index}.` : `${index}.`}
+                  </span>
+                  <span >{label}</span>
+                </div>
+              </Link>
+            ))}
           </div>
 
-          <aside style={{ zIndex: 1 }}
+          <aside
+            style={{ zIndex: 1 }}
             tabIndex={1}
-            className={`lg:hidden w-9/12 fixed z-1 inset-y-0 right-0 bg-bgNav text-white p-8  ${
+            className={`lg:hidden w-9/12 fixed z-1 inset-y-0 right-0 bg-bgNav text-white p-8 ${
               isSidebarOpen ? "" : "hidden"
             }`}
           >
@@ -123,41 +104,19 @@ export default function Header() {
             </button>
             <nav className="flex justify-center content-center items-center h-full">
               <div className="flex flex-col">
-                <Link href="#about">
-                  <div
-                    onClick={closeSidebar}
-                    className="flex content-center flex-col items-center space-x-2 mr-5 pb-5"
-                  >
-                    <span className="text-textBlue  line-height-8 font-mono ">
-                      01.
-                    </span>
-                    <span className=" font-smeibold">About</span>
-                  </div>
-                </Link>
-
-                <Link href="#experience">
-                  <div
-                    onClick={closeSidebar}
-                    className="flex content-center flex-col items-center space-x-2 mr-5 pb-5"
-                  >
-                    <span className="text-textBlue  line-height-8 font-mono ">
-                      02.
-                    </span>
-                    <span className=" font-smeibold">Experience</span>
-                  </div>
-                </Link>
-
-                <Link href="#contact">
-                  <div
-                    onClick={closeSidebar}
-                    className="flex content-center flex-col items-center space-x-2 mr-5 pb-5"
-                  >
-                    <span className="text-textBlue  line-height-8 font-mono ">
-                      03.
-                    </span>
-                    <span className=" font-smeibold">Contact</span>
-                  </div>
-                </Link>
+                {navLinks.map(({ label, href, index }) => (
+                  <Link key={index} href={href}>
+                    <div
+                      onClick={closeSidebar}
+                      className="flex content-center flex-col items-center space-x-2 mr-5 pb-5"
+                    >
+                      <span className="text-textBlue line-height-8 font-mono">
+                        {index < 10 ? `0${index}.` : `${index}.`}
+                      </span>
+                      <span className="font-semibold">{label}</span>
+                    </div>
+                  </Link>
+                ))}
               </div>
             </nav>
           </aside>

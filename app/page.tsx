@@ -3,6 +3,7 @@ import {useEffect} from "react"
 import HeroSection from "./components/hero_section";
 import AboutMe from "./components/about_me";
 import Experience from "./components/experience";
+import Work from "./components/work";
 import Header from "./components/header";
 import Contact from "./components/contact";
 import { LuLinkedin } from "react-icons/lu";
@@ -52,6 +53,7 @@ export default function Home() {
         <HeroSection />
         <AboutMe />
         <Experience />
+        <Work />
         <Contact />
       </div>
       <Footer />
