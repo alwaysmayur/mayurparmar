@@ -77,8 +77,6 @@ export const technologies = [
   "Angular.js",
   "Electron.js",
   "Three.js",
-  "Microsoft",
-  "TBSA",
 ];
 
 export const aboutMe = [
