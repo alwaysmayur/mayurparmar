@@ -1,5 +1,13 @@
 export const workData = [
   {
+    imageUrl: "/media/images/fotonvr_light.png",
+    title: "fotonVR",
+    description:
+      "FotonVR Platform — A fully dynamic & multi-domain website builder for FotonVR and their sub-brands.I built a custom CMS from scratch that allows the team to launch multiple websites under one core system, manage  content, and handle user permissions with secure role-based access.This platform is running in production and powers real marketing sites + product sites without requiring dev involvement.",
+    link: "https://fotonvr.com/",
+    technologies: ["Next JS", "Tailwind CSS","MongoDB","JWT Token","Sun Editor"],
+  },
+  {
     imageUrl: "/media/images/the-elite-world.png",
     title: "The Elite World",
     description:
