@@ -1,33 +1,35 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { navLinks } from "@/public/data";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const openSidebar = () => {
-    setIsSidebarOpen(true);
-  };
-
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
+  const openSidebar = useCallback(() => setIsSidebarOpen(true), []);
+  const closeSidebar = useCallback(() => setIsSidebarOpen(false), []);
 
   useEffect(() => {
-    // Check the state of the sidebar and add/remove the 'overflow-hidden' class accordingly
+    // Lock body scroll when sidebar is open
     if (isSidebarOpen) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
 
-    // Cleanup function to remove the class when the component unmounts
+    // Close on Escape key
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeSidebar();
+    };
+
+    if (isSidebarOpen) document.addEventListener("keydown", onKey);
+
     return () => {
       document.body.classList.remove("overflow-hidden");
+      document.removeEventListener("keydown", onKey);
     };
-  }, [isSidebarOpen]);
+  }, [isSidebarOpen, closeSidebar]);
 
   return (
     <header className="bg-bgDark">
@@ -45,6 +47,7 @@ export default function Header() {
               />
             </a>
           </div>
+
           <div className="flex bg-bgDark md:hidden">
             <button onClick={openSidebar}>
               <svg
@@ -63,29 +66,50 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <div className="hidden md:flex text-md text-textGray">
-            {navLinks.map(({ label, href, index }) => (
-              <Link key={index} href={href}>
-                <div className="flex items-center space-x-2 mr-5">
-                  <span className="text-textBlue line-height-8 font-mono">
-                    {index < 10 ? `0${index}.` : `${index}.`}
-                  </span>
-                  <span >{label}</span>
-                </div>
-              </Link>
-            ))}
+
+          <div className="hidden md:flex text-md content-center items-center text-textGray">
+            {navLinks.map(({ label, href, index }) =>
+              index == 0 ? (
+                <Link key={index} href={href}>
+                  <div className="flex items-center px-3 py-1 mt-0 rounded-md text-lg font-bold bg-textBlue text-gray-900 space-x-2 mr-5">
+                    <span>{label}</span>
+                  </div>
+                </Link>
+              ) : (
+                <Link key={index} href={href}>
+                  <div className="flex items-center space-x-2 mr-5">
+                    <span className="text-textBlue line-height-8 font-mono">
+                      {index < 10 ? `0${index}.` : `${index}.`}
+                    </span>
+                    <span>{label}</span>
+                  </div>
+                </Link>
+              )
+            )}
           </div>
 
+          {/* overlay - click to close */}
+          <div
+            className={`fixed inset-0 bg-black/40 transition-opacity duration-200 ${
+              isSidebarOpen ? "opacity-100 z-40" : "opacity-0 pointer-events-none"
+            }`}
+            onClick={closeSidebar}
+            aria-hidden={!isSidebarOpen}
+          />
+
           <aside
-            style={{ zIndex: 1 }}
-            tabIndex={1}
-            className={`lg:hidden w-9/12 fixed z-1 inset-y-0 right-0 bg-bgNav text-white p-8 ${
-              isSidebarOpen ? "" : "hidden"
+            id="mobile-sidebar"
+            role="dialog"
+            aria-modal="true"
+            style={{ zIndex: 50 }}
+            className={`md:hidden fixed right-0 top-0 h-full w-9/12 max-w-sm bg-bgNav text-white p-6 transform transition-transform duration-300 ${
+              isSidebarOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
             <button
               onClick={closeSidebar}
-              className="absolute top-0 right-4 p-2 text-white"
+              className="absolute top-4 right-4 p-2 text-white"
+              aria-label="Close menu"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +117,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-10 h-10 text-textBlue"
+                className="w-8 h-8 text-textBlue"
               >
                 <path
                   strokeLinecap="round"
@@ -102,13 +126,13 @@ export default function Header() {
                 />
               </svg>
             </button>
-            <nav className="flex justify-center content-center items-center h-full">
+            <nav className="flex justify-center items-center h-full">
               <div className="flex flex-col">
                 {navLinks.map(({ label, href, index }) => (
                   <Link key={index} href={href}>
                     <div
                       onClick={closeSidebar}
-                      className="flex content-center flex-col items-center space-x-2 mr-5 pb-5"
+                      className="flex flex-col items-center pb-5"
                     >
                       <span className="text-textBlue line-height-8 font-mono">
                         {index < 10 ? `0${index}.` : `${index}.`}
