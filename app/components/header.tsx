@@ -69,13 +69,7 @@ export default function Header() {
 
           <div className="hidden md:flex text-md content-center items-center text-textGray">
             {navLinks.map(({ label, href, index }) =>
-              index == 0 ? (
-                <Link key={index} href={href}>
-                  <div className="flex items-center px-3 py-1 mt-0 rounded-md text-lg font-bold bg-textBlue text-gray-900 space-x-2 mr-5">
-                    <span>{label}</span>
-                  </div>
-                </Link>
-              ) : (
+             (
                 <Link key={index} href={href}>
                   <div className="flex items-center space-x-2 mr-5">
                     <span className="text-textBlue line-height-8 font-mono">

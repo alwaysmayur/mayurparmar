@@ -39,7 +39,6 @@ export const navLinks = [
   { label: "Experience", href: "#experience", index: 2 },
   { label: "Work", href: "#work", index: 3 },
   { label: "Contact", href: "#contact", index: 4 },
-    { label: "Resume", href: "/media/pdf/Mayur_Parmar.pdf", index: 0 },
 ];
 
 export const experienceData = [
