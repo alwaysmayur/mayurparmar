@@ -24,7 +24,7 @@ export const workData = [
     technologies: ["Next JS", "Auth JS", "Tailwind CSS", "Chart JS", "MongoDB"],
   },
   {
-    imageUrl: "/media/images/staff-track.png",
+    imageUrl: "/media/images/match-macking.png",
     title: "Match Macking",
     description:
       "This is a smart matching system that connects client gig briefs with the most suitable creators. Clients usually write vague lines like “Need candid photographer in Goa, ₹80k budget” — I built a system that understands this text, converts it into structured data, and then finds the top 3 most relevant talents.It scores each talent based on location, skills, style, experience, portfolio tags, and budget fit — and returns a match score + explanation of why that talent matched.",

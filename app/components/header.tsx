@@ -91,7 +91,9 @@ export default function Header() {
           {/* overlay - click to close */}
           <div
             className={`fixed inset-0 bg-black/40 transition-opacity duration-200 ${
-              isSidebarOpen ? "opacity-100 z-40" : "opacity-0 pointer-events-none"
+              isSidebarOpen
+                ? "opacity-100 z-40"
+                : "opacity-0 pointer-events-none"
             }`}
             onClick={closeSidebar}
             aria-hidden={!isSidebarOpen}
@@ -128,19 +130,23 @@ export default function Header() {
             </button>
             <nav className="flex justify-center items-center h-full">
               <div className="flex flex-col">
-                {navLinks.map(({ label, href, index }) => (
-                  <Link key={index} href={href}>
-                    <div
-                      onClick={closeSidebar}
-                      className="flex flex-col items-center pb-5"
-                    >
-                      <span className="text-textBlue line-height-8 font-mono">
-                        {index < 10 ? `0${index}.` : `${index}.`}
-                      </span>
-                      <span className="font-semibold">{label}</span>
-                    </div>
-                  </Link>
-                ))}
+                {navLinks.map(({ label, href, index }) =>
+                  index !== 0 ? (
+                    <Link key={index} href={href}>
+                      <div
+                        onClick={closeSidebar}
+                        className="flex flex-col items-center pb-5"
+                      >
+                        <span className="text-textBlue line-height-8 font-mono">
+                          {index < 10 ? `0${index}.` : `${index}.`}
+                        </span>
+                        <span className="font-semibold">{label}</span>
+                      </div>
+                    </Link>
+                  ) : (
+                    ""
+                  )
+                )}
               </div>
             </nav>
           </aside>
