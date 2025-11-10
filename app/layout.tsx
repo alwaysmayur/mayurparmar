@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import 'aos/dist/aos.css'; 
+import "aos/dist/aos.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mayur Parmar",
+  title: "Mayur Parmar | Full-Stack Developer",
   description:
-    "Mayur Parmar: Passionate Fullstack Web Developer crafting seamless digital experiences. Expertise in front-end and back-end technologies, delivering innovative solutions for a dynamic online world. Explore Mayur's portfolio for cutting-edge web development and transformative code creations",
+    "Mayur Parmar is a Full-Stack Developer specialized in React, Next.js, Node.js, and MongoDB. Building fast, scalable web apps and polished user experiences.",
   icons: "/favicon.ico",
 };
+
 
 export default function RootLayout({
   children,
@@ -18,7 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className=" scroll-smooth">
+    <html lang="en" className=" scroll-smooth overflow-x-hidden">
+
       <body className={inter.className}>{children}</body>
     </html>
   );

@@ -25,7 +25,7 @@ export default function Work({ }) {
         <div
           key={index}
           className="py-14 px-5 flex justify-start w-full"
-          data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+          data-aos={index % 2 === 0 ? "fade-left" : "fade-up"}
         >
           <div className="flex w-full gap-10 flex-col lg:flex-row">
             {/* Left Section: Image */}

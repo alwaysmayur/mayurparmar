@@ -36,7 +36,7 @@ export default function Experience({  }) {
                     href={job.companyUrl}
                     target="_blank"
                   >
-                    {`  @ ${job.companyName}`}
+                    {`@ ${job.companyName}`}
                   </a>
                 </h3>
                 <span data-aos="fade-up" className="font-code">

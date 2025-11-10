@@ -42,7 +42,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="flex items-center w-52 justify-center px-5 py-3 mt-10 rounded-md text-2xl font-bold bg-textBlue hover:bg-textBlue/90 text-gray-900">
+            <div className="flex items-center w-52 justify-center px-5 py-3 mt-10 rounded-md text-2xl font-semibold bg-textBlue hover:bg-textBlue/90 text-gray-900">
               <span>Resume</span>
             </div>
           </Link>
