@@ -1,11 +1,32 @@
 export const workData = [
   {
+    imageUrl: "/media/images/nj-jewels-wholesale.png",
+    title: "NJ Jewels Wholesale",
+    description:
+      "NJ Jewels Wholesale is a full-stack e-commerce platform built for a jewelry wholesale business, focusing on performance, scalability, and a smooth purchasing experience. The application includes product listings, category-based filtering, cart and checkout flow, secure order management, and an admin dashboard for inventory and order control. Designed and developed end-to-end with a responsive-first approach to ensure seamless usability across devices.",
+    link: "https://njjewelswholesale.com/",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Razorpay",
+    ],
+  },
+
+  {
     imageUrl: "/media/images/fotonvr_light.png",
     title: "fotonVR",
     description:
       "FotonVR Platform — A fully dynamic & multi-domain website builder for FotonVR and their sub-brands.I built a custom CMS from scratch that allows the team to launch multiple websites under one core system, manage  content, and handle user permissions with secure role-based access.This platform is running in production and powers real marketing sites + product sites without requiring dev involvement.",
     link: "https://fotonvr.com/",
-    technologies: ["Next JS", "Tailwind CSS","MongoDB","JWT Token","Sun Editor"],
+    technologies: [
+      "Next JS",
+      "Tailwind CSS",
+      "MongoDB",
+      "JWT Token",
+      "Sun Editor",
+    ],
   },
   {
     imageUrl: "/media/images/the-elite-world.png",
@@ -34,7 +55,6 @@ export const workData = [
 ];
 
 export const navLinks = [
-
   { label: "About", href: "#about", index: 1 },
   { label: "Experience", href: "#experience", index: 2 },
   { label: "Work", href: "#work", index: 3 },
