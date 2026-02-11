@@ -38,7 +38,7 @@ export default function HeroSection() {
           </span>
           <Link
             data-aos="fade-up"
-            href="/media/pdf/Mayur_Parmar.pdf"
+            href="/media/pdf/Mayur_Parmar_Fullstack_developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
