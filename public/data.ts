@@ -1,5 +1,20 @@
 export const workData = [
   {
+    imageUrl: "/media/images/dolphin-global-traders.png",
+    title: "Dolphin Global Traders",
+    description:
+      "An eco-friendly bags e-commerce and export website built to showcase and sell products like jute, cotton, juco, and non-woven bags to global clients. Developed a fully dynamic and scalable application using Next.js and React, featuring a structured product catalog, SEO-optimized pages for global visibility, and dedicated sections for bulk orders and custom branding. Integrated contact forms and WhatsApp flows for lead generation, ensuring a fast, seamless, and user-friendly experience across devices.",
+    link: "https://dolphinglobaltraders.com/",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Razorpay",
+    ],
+    tag: "Client Project",
+  },
+  {
     imageUrl: "/media/images/nj-jewels-wholesale.png",
     title: "NJ Jewels Wholesale",
     description:
@@ -63,6 +78,24 @@ export const navLinks = [
 
 export const experienceData = [
   {
+    title: "Software Engineer II",
+    companyName: "Prakash Software Solutions, Ahmedabad",
+    companyUrl: "https://prakashinfotech.com/",
+    duration: "May 2023 - Present",
+    projects: [
+      {
+        name: "Send2Me",
+        details: [
+          "Currently developing Send2Me, a workflow-driven platform that enables users to create, assign, and manage dynamic tasks with file uploads and shareable links.",
+          "My role involves building end-to-end features across the stack, designing efficient APIs, and ensuring seamless integration between frontend and backend systems.",
+          "Collaborating with cross-functional teams to implement new features, improve system performance, and deliver smooth, user-friendly experiences.",
+          "Continuously improving my skills and staying updated with modern technologies to build efficient and impactful digital solutions.",
+        ],
+      },
+
+    ],
+  },
+  {
     title: "Fullstack Developer",
     companyName: "fotonVR, Patan",
     companyUrl: "https://www.fotonvr.com/",
@@ -116,10 +149,13 @@ export const technologies = [
   "Three.js",
 ];
 
+
 export const aboutMe = [
   `Hello! My name is Mayur Parmar, and I love the process of making digital art come to life. My journey into the world of web building began in the final semester of my diploma in computer engineering. While working on a library management project, a spark appeared that revealed my passion for creating streamlined, user-centered digital solutions.`,
 
-  `Fast-forward to the today. I work at FotonVR as a full-stack developer, contributing my abilities to the creation of complete solutions over the whole development stack. Working with cross-functional teams, putting new features into practice, and making sure front-end and back-end technologies are seamlessly integrated are all part of my job description.`,
+  `Fast-forward to today, I work at Prakash Software Solutions as a Software Engineer II, contributing to the development of scalable, high-performance web applications.`,
 
-  `In order to provide cutting-edge solutions that satisfy the needs of our clients and users, I am committed to keeping up with the most recent developments in the industry and technology. I do this by continuously improving my skills. I am always eager to learn new things and take on new challenges, and I am excited to see where my journey will take me next.`,
+  `I collaborate with cross-functional teams to implement new features, improve system performance, and deliver smooth, user-friendly experiences.`,
+
+  `I am committed to continuously improving my skills and staying updated with modern technologies to build efficient and impactful digital solutions. I enjoy taking on new challenges and solving real-world problems through clean and scalable code.`,
 ];

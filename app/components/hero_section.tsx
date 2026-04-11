@@ -32,8 +32,8 @@ export default function HeroSection() {
           </h1>
           <span data-aos="fade-up" className=" text-textGray  max-w-xl text-md">
             {`I build amazing digital experiences as a software engineer, and sometimes I design too. Right now, I'm focused on creating user-friendly products at `}
-            <a className="text-textBlue" href="www.fotonvr.com">
-              fotonVR.
+            <a className="text-textBlue" href="https://prakashinfotech.com/">
+              Prakash Software Solutions.
             </a>
           </span>
           <Link

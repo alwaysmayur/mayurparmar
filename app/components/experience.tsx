@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import { experienceData } from "@/public/data";
 
-export default function Experience({  }) {
+export default function Experience({ }) {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -36,7 +36,7 @@ export default function Experience({  }) {
                     href={job.companyUrl}
                     target="_blank"
                   >
-                    {`@ ${job.companyName}`}
+                    {` @ ${job.companyName}`}
                   </a>
                 </h3>
                 <span data-aos="fade-up" className="font-code">
