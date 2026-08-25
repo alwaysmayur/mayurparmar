@@ -81,7 +81,7 @@ export const experienceData = [
     title: "Software Engineer II",
     companyName: "Prakash Software Solutions, Ahmedabad",
     companyUrl: "https://prakashinfotech.com/",
-    duration: "March 2026 - Present",
+    duration: "March 2026 - June 2026",
     projects: [
       {
         name: "Send2Me",
