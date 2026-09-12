@@ -155,7 +155,7 @@ export const experienceData = [
     title: "Fullstack Developer",
     companyName: "fotonVR, Patan",
     companyUrl: "https://www.fotonvr.com/",
-    duration: "May 2023 - June 2026",
+    duration: "May 2023 - Fab 2026",
     projects: [
       {
         name: "fotonVR website",
