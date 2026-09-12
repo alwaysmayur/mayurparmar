@@ -104,7 +104,7 @@ export const workData: Project[] = [
   {
     slug: "match-macking",
     imageUrl: "/media/images/match-macking.png",
-    title: "Match Macking",
+    title: "Match Making",
     description:
       "This is a smart matching system that connects client gig briefs with the most suitable creators. Clients usually write vague lines like “Need candid photographer in Goa, ₹80k budget” — I built a system that understands this text, converts it into structured data, and then finds the top 3 most relevant talents. It scores each talent based on location, skills, style, experience, portfolio tags, and budget fit — and returns a match score + explanation of why that talent matched.",
     link: "https://thematchmaking.vercel.app/",
@@ -155,7 +155,7 @@ export const experienceData = [
     title: "Fullstack Developer",
     companyName: "fotonVR, Patan",
     companyUrl: "https://www.fotonvr.com/",
-    duration: "May 2023 - Fab 2026",
+    duration: "May 2023 - Feb 2026",
     projects: [
       {
         name: "fotonVR website",
@@ -182,11 +182,11 @@ export const experienceData = [
     duration: "Feb 2022 - May 2023",
     projects: [
       {
-        name: "Hubspot API Integration",
+        name: "HubSpot API Integration",
         details: [
           "Successfully integrated HubSpot APIs to enhance CRM functionalities and streamline business processes.",
           "Implemented data synchronization between HubSpot CRM and other systems, ensuring real-time and accurate information across platforms.",
-          "Troubleshooted and resolved API-related issues promptly, ensuring minimal disruption to business operations.",
+          "Diagnosed and resolved API-related issues promptly, ensuring minimal disruption to business operations.",
         ],
       },
     ],

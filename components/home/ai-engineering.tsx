@@ -8,7 +8,7 @@ export default function AiEngineeringTeaser() {
       title="AI Engineering"
       description="Building intelligent systems by combining full-stack engineering with LLMs, structured data, and semantic matching."
     >
-      <h3 className="text-lg font-semibold text-foreground">Match Macking</h3>
+      <h3 className="text-lg font-semibold text-foreground">Match Making</h3>
       <p className="mt-1.5 text-[15px] leading-[1.7] text-muted-foreground">
         A matching system that converts free-text client briefs into structured data, then
         scores candidates against it by location, skills, style, experience, and budget fit —

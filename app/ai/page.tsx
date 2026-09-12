@@ -20,8 +20,8 @@ export default function AiPage() {
         data, and semantic matching.
       </p>
 
-      <h2 id="match-macking" className="mt-14 text-[24px] font-semibold tracking-tight text-foreground">
-        Match Macking
+      <h2 id="match-making" className="mt-14 text-[24px] font-semibold tracking-tight text-foreground">
+        Match Making
       </h2>
       <div className="mt-5">
         <Badge variant="accent">Prototype</Badge>
