@@ -1,53 +1,58 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./content/**/*.{md,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        border: {
+          DEFAULT: "hsl(var(--border))",
+          subtle: "hsl(var(--border-subtle))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        subtle: {
+          foreground: "hsl(var(--subtle-foreground))",
+        },
+        faint: {
+          foreground: "hsl(var(--faint-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          hover: "hsl(var(--accent-hover))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        surface: "hsl(var(--surface))",
+        code: {
+          DEFAULT: "hsl(var(--code-bg))",
+          border: "hsl(var(--code-border))",
+          foreground: "hsl(var(--code-foreground))",
+        },
+        nav: {
+          active: "hsl(var(--nav-active-bg))",
+          hover: "hsl(var(--nav-hover-bg))",
+        },
+        badge: {
+          DEFAULT: "hsl(var(--badge-bg))",
+          border: "hsl(var(--badge-border))",
+          text: "hsl(var(--badge-text))",
+        },
       },
       fontFamily: {
-        mono: ["Mono Sans", "monospace"],
-        noto: ['"Noto Sans Linear B"', "sans-serif"],
-        sans: ["Inter", "Noto Sans Linear B", "sans-serif"],
-        code: ["Fira Code", "monospace"],
-        roboto: ["Roboto Mono", "monospace"],
-        poppins: ['Poppins', 'sans-serif'],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
-      fontWeight: {
-        thin: "100",
-        light: "300",
-        normal: "400",
-        medium: "500",
-        semibold: "600",
-        bold: "700",
-        extrabold: "800",
-        black: "900",
-      },
-      lineHeight: {
-        "76": "76px",
-      },
-      letterSpacing: {
-        tighter: "-0.05em",
-        tight: "-0.025em",
-        normal: "0",
-        wide: "0.025em",
-        wider: "0.05em",
-        widest: "0.1em",
-      },
-      colors: {
-        bgDark: "#0a192f",
-        textGray: "#8892b0",
-        textBlue: "#64ffda",
-        headGray: "#ccd6f6",
-        bgNav:"#04364A"
+      borderRadius: {
+        badge: "5px",
       },
     },
   },

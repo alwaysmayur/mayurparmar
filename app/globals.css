@@ -1,51 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* styles/fonts.css or styles/fonts.scss */
-@import url('https://fonts.googleapis.com/css2?family=Mono+Sans:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+Linear+B&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --surface: 150 20% 98%;
+  --border: 150 13% 94%;
+  --border-subtle: 150 15% 96%;
+  --muted: 150 20% 96%;
+  --muted-foreground: 140 5% 32%;
+  --subtle-foreground: 140 4% 45%;
+  --faint-foreground: 140 4% 64%;
+  --accent: 142 76% 36%;
+  --accent-hover: 142 72% 29%;
+  --accent-foreground: 0 0% 100%;
+  --code-bg: 150 20% 97%;
+  --code-border: 150 13% 91%;
+  --code-foreground: 0 0% 0%;
+  --nav-active-bg: 142 40% 95%;
+  --nav-hover-bg: 150 20% 97%;
+  --badge-bg: 150 20% 97%;
+  --badge-border: 150 13% 91%;
+  --badge-text: 140 10% 35%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --surface: 135 6% 5%;
+  --border: 135 5% 16%;
+  --border-subtle: 135 5% 12%;
+  --muted: 135 5% 12%;
+  --muted-foreground: 135 2% 63%;
+  --subtle-foreground: 135 3% 45%;
+  --faint-foreground: 135 3% 36%;
+  --accent: 158 93% 41%;
+  --accent-hover: 158 64% 58%;
+  --accent-foreground: 0 0% 4%;
+  --code-bg: 135 8% 9%;
+  --code-border: 135 6% 20%;
+  --code-foreground: 0 0% 100%;
+  --nav-active-bg: 150 25% 12%;
+  --nav-hover-bg: 135 5% 9%;
+  --badge-bg: 135 5% 12%;
+  --badge-border: 135 5% 18%;
+  --badge-text: 135 2% 63%;
 }
+
 @layer base {
   html {
     @apply scroll-smooth;
   }
-}
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  ::selection {
+    @apply bg-accent/20;
+  }
 }
 
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
 
-.animation-hover:after {
-  background: none repeat scroll 0 0 transparent;
-  content: "";
-  height: 2px;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  @apply w-0 bg-orange-500 left-1/2 block bottom-0 absolute;
+.thin-scrollbar:hover {
+  scrollbar-color: hsl(var(--faint-foreground)) transparent;
 }
-.animation-active:after {
-  @apply left-0 w-full;
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px;
 }
-.animation-hover:hover:after {
-  @apply left-0 w-full;
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 9999px;
+}
+
+.thin-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--faint-foreground));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
