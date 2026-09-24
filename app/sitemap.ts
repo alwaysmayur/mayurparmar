@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { workData } from "@/lib/data";
+import { aiData, workData } from "@/lib/data";
 
 const baseUrl = "https://mayurparmar.vercel.app";
 
@@ -14,7 +14,9 @@ const staticRoutes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const projectRoutes = workData.map((project) => `/projects/${project.slug}`);
 
-  return [...staticRoutes, ...projectRoutes].map((route) => ({
+  const aiRoutes = aiData.map((project) => `/ai/${project.slug}`);
+
+  return [...staticRoutes, ...projectRoutes, ...aiRoutes].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
   }));

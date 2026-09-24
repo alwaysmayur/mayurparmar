@@ -3,10 +3,30 @@ export type Project = {
   imageUrl: string;
   title: string;
   description: string;
-  link: string;
+  /** Live URL. Omit for projects that aren't deployed yet. */
+  link?: string;
+  github?: string;
+  /** Shown as the accent badge on the case study, e.g. "Prototype". Defaults to "Production". */
+  status?: string;
   technologies: string[];
   features: string[];
   tag?: string;
+};
+
+const matchMaking: Project = {
+  slug: "match-macking",
+  imageUrl: "/media/images/match-macking.png",
+  title: "Match Making",
+  description:
+    "This is a smart matching system that connects client gig briefs with the most suitable creators. Clients usually write vague lines like “Need candid photographer in Goa, ₹80k budget” — I built a system that understands this text, converts it into structured data, and then finds the top 3 most relevant talents. It scores each talent based on location, skills, style, experience, portfolio tags, and budget fit — and returns a match score + explanation of why that talent matched.",
+  link: "https://thematchmaking.vercel.app/",
+  status: "Prototype",
+  technologies: ["Next JS", "TypeScript"],
+  features: [
+    "Parses free-text briefs into structured data",
+    "Scores candidates by location, skills, style, experience, portfolio tags, and budget fit",
+    "Returns a match score with an explanation for each recommendation",
+  ],
 };
 
 export const workData: Project[] = [
@@ -101,20 +121,28 @@ export const workData: Project[] = [
       "Reporting views built with Chart.js",
     ],
   },
+  matchMaking,
+];
+
+export const aiData: Project[] = [
   {
-    slug: "match-macking",
-    imageUrl: "/media/images/match-macking.png",
-    title: "Match Making",
+    slug: "clipping-ai",
+    // Placeholder cover — replace with a real screenshot.
+    imageUrl: "/media/images/clipping-ai.png",
+    title: "Clipping AI",
     description:
-      "This is a smart matching system that connects client gig briefs with the most suitable creators. Clients usually write vague lines like “Need candid photographer in Goa, ₹80k budget” — I built a system that understands this text, converts it into structured data, and then finds the top 3 most relevant talents. It scores each talent based on location, skills, style, experience, portfolio tags, and budget fit — and returns a match score + explanation of why that talent matched.",
-    link: "https://thematchmaking.vercel.app/",
-    technologies: ["Next JS", "TypeScript"],
+      "Clipping AI turns long-form videos into short, shareable clips automatically. It transcribes the source video, uses an LLM to find the most engaging moments, and cuts them into ready-to-post vertical clips with captions — replacing hours of manual scrubbing and editing with a single upload.",
+    github: "https://github.com/alwaysmayur/clipping-ai",
+    status: "Work in progress",
+    technologies: ["Next JS", "TypeScript", "LLM", "FFmpeg"],
     features: [
-      "Parses free-text briefs into structured data",
-      "Scores candidates by location, skills, style, experience, portfolio tags, and budget fit",
-      "Returns a match score with an explanation for each recommendation",
+      "Upload a long-form video and get it transcribed with timestamps",
+      "LLM-based highlight detection that scores segments for engagement",
+      "Automatic cutting and reframing into vertical short-form clips",
+      "Burned-in captions generated from the transcript",
     ],
   },
+  matchMaking,
 ];
 
 export const experienceData = [

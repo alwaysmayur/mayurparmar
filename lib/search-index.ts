@@ -1,5 +1,5 @@
 import { navGroups } from "./nav";
-import { workData } from "./data";
+import { aiData, workData } from "./data";
 
 export type SearchEntry = {
   title: string;
@@ -24,4 +24,11 @@ const projectEntries: SearchEntry[] = workData.map((project) => ({
   href: `/projects/${project.slug}`,
 }));
 
-export const searchIndex: SearchEntry[] = [...navEntries, ...projectEntries];
+const aiEntries: SearchEntry[] = aiData.map((project) => ({
+  title: project.title,
+  category: "AI Engineering",
+  description: project.description,
+  href: `/ai/${project.slug}`,
+}));
+
+export const searchIndex: SearchEntry[] = [...navEntries, ...projectEntries, ...aiEntries];

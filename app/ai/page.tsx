@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/docs/breadcrumbs";
-import Badge from "@/components/ui/badge";
+import ProjectList from "@/components/project/project-list";
+import { aiData } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "AI Engineering",
@@ -20,25 +21,7 @@ export default function AiPage() {
         data, and semantic matching.
       </p>
 
-      <h2 id="match-making" className="mt-14 text-[24px] font-semibold tracking-tight text-foreground">
-        Match Making
-      </h2>
-      <div className="mt-5">
-        <Badge variant="accent">Prototype</Badge>
-      </div>
-      <p className="mt-3 text-[15px] leading-[1.7] text-muted-foreground">
-        Converts free-text client briefs into structured data, then scores candidates against it
-        by location, skills, style, experience, portfolio tags, and budget fit, returning a match
-        score with an explanation.
-      </p>
-      <a
-        href="https://thematchmaking.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-3 inline-block text-sm font-medium text-accent hover:text-accent-hover hover:underline"
-      >
-        View project →
-      </a>
+      <ProjectList className="mt-10" projects={aiData} basePath="/ai" />
     </div>
   );
 }
