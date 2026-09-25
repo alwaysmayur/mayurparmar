@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Keyur Industries | Psyllium • Natural Fibre • Global Supply</title>
+<meta name="description" content="Modern website concept for Keyur Industries — manufacturer and exporter of psyllium seed, psyllium husk and psyllium husk powder.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --forest:#103b2a; --green:#287348; --leaf:#79ad63; --lime:#dff0cf;
+  --cream:#faf9f1; --paper:#fff; --gold:#c8a45e; --ink:#193329;
+  --muted:#64766d; --line:rgba(16,59,42,.12); --shadow:0 24px 70px rgba(16,59,42,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit}
+
+.top-strip{
+  background:var(--forest);color:#d7e7dc;font-size:12px;
+}
+.top-inner{
+  max-width:1200px;margin:auto;padding:8px 22px;
+  display:flex;justify-content:space-between;align-items:center;gap:15px
+}
+.top-left{display:flex;gap:18px;flex-wrap:wrap}
+.top-left a:hover{color:#fff}
+.langs{display:flex;gap:7px;align-items:center}
+.langs a{
+  width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  font-size:15px;transition:.2s
+}
+.langs a:hover{background:#fff;transform:translateY(-2px)}
+
+.nav{
+  position:sticky;top:0;z-index:100;background:rgba(250,249,241,.92);
+  backdrop-filter:blur(18px);border-bottom:1px solid var(--line)
+}
+.nav-inner{
+  max-width:1200px;height:82px;margin:auto;padding:0 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:25px
+}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800}
+.logo{
+  width:43px;height:43px;border-radius:50% 50% 50% 8px;
+  background:linear-gradient(145deg,#a4cf7c,#237148);transform:rotate(-45deg);
+  position:relative;box-shadow:0 8px 20px rgba(40,115,72,.2)
+}
+.logo:after{
+  content:"";position:absolute;width:12px;height:23px;border:2px solid #fff;
+  border-radius:90% 10% 90% 10%;left:14px;top:8px
+}
+.brand-text{font-size:16px;letter-spacing:.02em}
+.brand-text span{color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links>a{font-size:13px;font-weight:700;color:#42584e}
+.nav-links>a:hover{color:var(--green)}
+.nav-cta{background:var(--forest);color:#fff!important;padding:11px 17px;border-radius:999px}
+.menu{display:none;font-size:24px}
+
+.hero{
+  min-height:calc(100vh - 118px);padding:95px 22px 80px;overflow:hidden;position:relative;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(121,173,99,.28),transparent 30%),
+    radial-gradient(circle at 12% 90%,rgba(200,164,94,.13),transparent 30%),
+    linear-gradient(135deg,#f8f5e8,#edf6e8 55%,#dcefd7)
+}
+.hero:before{
+  content:"";position:absolute;width:650px;height:650px;border-radius:50%;right:-260px;top:-110px;
+  border:1px solid rgba(40,115,72,.14);box-shadow:0 0 0 80px rgba(40,115,72,.025),0 0 0 160px rgba(40,115,72,.015)
+}
+.hero-grid{
+  max-width:1200px;margin:auto;display:grid;grid-template-columns:1.02fr .98fr;gap:65px;align-items:center;position:relative;z-index:2
+}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.68);
+  border:1px solid rgba(40,115,72,.13);border-radius:999px;padding:8px 13px;margin-bottom:20px
+}
+h1,h2,h3{font-family:"Playfair Display",serif}
+h1{font-size:clamp(50px,6.8vw,86px);line-height:.98;letter-spacing:-.055em}
+h1 em{color:var(--green);font-style:normal}
+.hero p{max-width:650px;margin-top:25px;color:#566a60;font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:31px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;
+  border-radius:999px;font-size:13px;font-weight:800;transition:.25s
+}
+.primary{background:var(--forest);color:#fff;box-shadow:0 12px 30px rgba(16,59,42,.18)}
+.primary:hover{transform:translateY(-2px)}
+.secondary{background:rgba(255,255,255,.6);border:1px solid var(--line)}
+.secondary:hover{background:#fff}
+
+.hero-image{
+  position:relative;min-height:520px;display:grid;place-items:center
+}
+.hero-photo{
+  width:min(530px,90vw);height:530px;object-fit:cover;border-radius:48% 52% 50% 50%;
+  box-shadow:0 35px 80px rgba(16,59,42,.18);border:10px solid rgba(255,255,255,.6);
+  animation:float 6s ease-in-out infinite
+}
+.float-card{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:17px;
+  padding:13px 16px;box-shadow:var(--shadow);font-size:12px;font-weight:800
+}
+.fc1{left:0;top:18%}.fc2{right:0;bottom:23%}.fc3{left:14%;bottom:3%}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+
+.trust{background:var(--forest);color:#fff}
+.trust-grid{max-width:1200px;margin:auto;padding:21px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust-item{display:flex;gap:12px;align-items:center}
+.trust-icon{font-size:22px}
+.trust-item strong{display:block;font-size:13px}.trust-item small{color:#b8cec1;font-size:11px}
+
+section{padding:105px 22px}
+.container{max-width:1200px;margin:auto}
+.section-head{max-width:750px;margin-bottom:45px}
+.section-head h2{font-size:clamp(39px,5vw,62px);line-height:1.05;letter-spacing:-.04em;margin-top:9px}
+.section-head p{color:var(--muted);font-size:16px;margin-top:14px}
+
+.products{background:#fff}
+.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.product{
+  border:1px solid var(--line);border-radius:23px;background:linear-gradient(180deg,#fff,#f6f8ef);
+  padding:15px;overflow:hidden;transition:.3s
+}
+.product:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.product img{width:100%;height:180px;object-fit:cover;border-radius:17px}
+.product h3{font-size:21px;margin:17px 4px 5px}
+.product p{font-size:12px;color:var(--muted);margin:0 4px 15px}
+.product a{color:var(--green);font-size:12px;font-weight:800;margin:0 4px 3px;display:inline-block}
+
+.about{
+  background:linear-gradient(135deg,#123c2b,#1f6040);color:#fff;position:relative;overflow:hidden
+}
+.about:after{
+  content:"";position:absolute;width:600px;height:600px;border-radius:50%;right:-250px;top:-260px;
+  border:1px solid rgba(255,255,255,.1);box-shadow:0 0 0 100px rgba(255,255,255,.02),0 0 0 200px rgba(255,255,255,.012)
+}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center;position:relative;z-index:2}
+.about h2{font-size:clamp(40px,5vw,62px);line-height:1.05;margin-top:9px}
+.about .kicker{color:#b3d78f}
+.about p{color:#c7d9cf;margin-top:18px}
+.about-photo{border-radius:28px;width:100%;height:450px;object-fit:cover;box-shadow:0 25px 60px rgba(0,0,0,.18)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:18px;border-radius:18px}
+.stat strong{font-family:"Playfair Display";font-size:31px;color:#d4e8bd;display:block}
+.stat span{font-size:11px;color:#bfd3c8}
+
+.quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.quality-list{display:grid;gap:13px;margin-top:30px}
+.quality-item{display:flex;gap:14px;background:#eff6ea;border:1px solid #dcebd7;padding:17px;border-radius:18px}
+.quality-item b{display:block;font-size:14px}.quality-item span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.quality-photo{border-radius:30px;width:100%;height:470px;object-fit:cover;box-shadow:var(--shadow)}
+
+.infra{background:#f2f6ed}
+.infra-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}
+.infra-photo{width:100%;height:450px;object-fit:cover;border-radius:30px;box-shadow:var(--shadow)}
+.capacity{
+  margin-top:28px;padding:25px;border-radius:23px;background:#fff;border:1px solid var(--line)
+}
+.capacity strong{font-family:"Playfair Display";font-size:54px;color:var(--green);line-height:1}
+.capacity span{display:block;color:var(--muted);margin-top:6px}
+
+.exports{background:#fff}
+.export-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.world{
+  min-height:430px;border-radius:30px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 40% 40%,rgba(255,255,255,.35),transparent 20%),
+    linear-gradient(145deg,#dcefd4,#8cbd7b)
+}
+.world:before{
+  content:"";position:absolute;width:430px;height:430px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);
+  border:1px solid rgba(16,59,42,.18);box-shadow:0 0 0 55px rgba(16,59,42,.035),0 0 0 110px rgba(16,59,42,.025)
+}
+.world-label{
+  position:absolute;left:28px;bottom:28px;background:rgba(255,255,255,.9);padding:18px 20px;border-radius:18px;max-width:310px
+}
+.world-label strong{font-family:"Playfair Display";font-size:24px}
+.countries{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.country{padding:8px 11px;border-radius:999px;background:#eff6ea;border:1px solid #dcebd7;font-size:11px;font-weight:700}
+
+.pack-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}
+.pack{background:#f3f6ed;border-radius:16px;padding:17px;text-align:center;border:1px solid var(--line);font-size:12px;font-weight:700}
+
+.languages{
+  background:#eaf3e5;border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.language-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px}
+.language-inner strong{font-family:"Playfair Display";font-size:22px}
+.language-icons{display:flex;gap:10px}
+.language-icons a{
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;
+  border:1px solid var(--line);font-size:20px;box-shadow:0 7px 20px rgba(16,59,42,.07)
+}
+.language-icons a:hover{transform:translateY(-3px);border-color:var(--green)}
+
+.cta{background:linear-gradient(135deg,#e5f0dc,#f8f5e7);padding:90px 22px}
+.cta-box{
+  max-width:1200px;margin:auto;background:var(--forest);color:#fff;border-radius:32px;
+  padding:60px;display:flex;align-items:center;justify-content:space-between;gap:35px;overflow:hidden;position:relative
+}
+.cta-box:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-110px;top:-140px;border:1px solid rgba(255,255,255,.1)}
+.cta-box h2{font-size:clamp(38px,5vw,58px);line-height:1.05;max-width:700px}
+.cta-box p{color:#c7d9cf;max-width:650px;margin-top:13px}
+.cta-box .primary{background:#dcefcf;color:var(--forest);box-shadow:none;white-space:nowrap}
+
+footer{background:#0b2b1f;color:#b5c9bd;padding:45px 22px}
+.footer-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.footer-brand{color:#fff;font-weight:800}.footer-note{font-size:12px;margin-top:6px}
+.footer-links{display:flex;gap:20px;font-size:12px}.footer-links a:hover{color:#fff}
+
+.reveal{opacity:0;transform:translateY(18px)}
+@media(max-width:1000px){
+ .nav-links{display:none}.menu{display:block}
+ .hero-grid,.about-grid,.quality-grid,.infra-grid,.export-grid{grid-template-columns:1fr}
+ .product-grid{grid-template-columns:repeat(2,1fr)}
+ .trust-grid{grid-template-columns:repeat(2,1fr)}
+ .pack-grid{grid-template-columns:repeat(3,1fr)}
+ .hero-image{min-height:430px}.hero-photo{width:420px;height:420px}
+}
+@media(max-width:600px){
+ .top-inner{align-items:flex-start}.top-left{display:none}.langs{margin-left:auto}
+ section{padding:75px 18px}
+ .product-grid,.trust-grid{grid-template-columns:1fr}
+ .hero{padding:70px 18px}.hero-photo{width:320px;height:320px}
+ .hero-image{min-height:350px}
+ .float-card{font-size:10px}.fc1{left:0}.fc2{right:0}.fc3{left:2%}
+ .stats{grid-template-columns:1fr}
+ .pack-grid{grid-template-columns:repeat(2,1fr)}
+ .language-inner{align-items:flex-start;flex-direction:column}.language-icons{flex-wrap:wrap}
+ .cta-box{padding:40px 27px;flex-direction:column;align-items:flex-start;border-radius:25px}
+ .footer-links{flex-wrap:wrap}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-strip">
+  <div class="top-inner">
+    <div class="top-left">
+      <a href="#contact">☎ Contact</a>
+      <a href="#inquiry">✦ Inquiry</a>
+      <a href="#products">⌁ Products</a>
+    </div>
+    <!-- Language selector: icons only, matching the spirit of the existing site. -->
+    <div class="langs" aria-label="Language selector">
+      <a title="English" href="#top">🇬🇧</a>
+      <a title="German" href="https://translate.google.com/translate?sl=en&tl=de&u=https://www.keyurpsyllium.com/" target="_blank">🇩🇪</a>
+      <a title="Spanish" href="https://translate.google.com/translate?sl=en&tl=es&u=https://www.keyurpsyllium.com/" target="_blank">🇪🇸</a>
+      <a title="French" href="https://translate.google.com/translate?sl=en&tl=fr&u=https://www.keyurpsyllium.com/" target="_blank">🇫🇷</a>
+      <a title="Italian" href="https://translate.google.com/translate?sl=en&tl=it&u=https://www.keyurpsyllium.com/" target="_blank">🇮🇹</a>
+      <a title="Portuguese" href="https://translate.google.com/translate?sl=en&tl=pt&u=https://www.keyurpsyllium.com/" target="_blank">🇵🇹</a>
+      <a title="Chinese" href="https://translate.google.com/translate?sl=en&tl=zh-CN&u=https://www.keyurpsyllium.com/" target="_blank">🇨🇳</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#home">
+      <span class="logo"></span>
+      <span class="brand-text">KEYUR <span>INDUSTRIES</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#quality">Quality</a>
+      <a href="#infrastructure">Infrastructure</a>
+      <a href="#exports">Exports</a>
+      <a class="nav-cta" href="#inquiry">Send Inquiry →</a>
+    </nav>
+    <div class="menu">☰</div>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="pill">🌿 Natural ingredient • Global supply</div>
+      <div class="kicker">Manufacturer & Exporter of Psyllium</div>
+      <h1>Pure psyllium.<br><em>Built for the world.</em></h1>
+      <p>
+        Keyur Industries is presented here as a modern, buyer-first destination for
+        Psyllium Seed, Psyllium Husk and Psyllium Husk Powder — with the company's
+        heritage, quality systems, manufacturing capability and export reach brought
+        into one clear experience.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#inquiry">Request Product Inquiry ↗</a>
+        <a class="btn secondary" href="#products">Explore Products ↓</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img class="hero-photo" src="https://www.keyurpsyllium.com/images/psyllium_seed.jpg" alt="Keyur Industries Psyllium Seed">
+      <div class="float-card fc1">🌱 Plantago Ovata</div>
+      <div class="float-card fc2">✓ Quality focused</div>
+      <div class="float-card fc3">🌍 Global markets</div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-grid">
+    <div class="trust-item"><span class="trust-icon">◉</span><div><strong>Since 1974</strong><small>Keyur Industries journey</small></div></div>
+    <div class="trust-item"><span class="trust-icon">🌿</span><div><strong>Gulab Brand®</strong><small>Sat-Isabgol since 1948</small></div></div>
+    <div class="trust-item"><span class="trust-icon">🔬</span><div><strong>GMP Practices</strong><small>Quality-led manufacturing</small></div></div>
+    <div class="trust-item"><span class="trust-icon">🌎</span><div><strong>Export Reach</strong><small>International customers</small></div></div>
+  </div>
+</div>
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Products</div>
+      <h2>The complete product range, presented clearly.</h2>
+      <p>Based on the existing product navigation: Psyllium Seed, Psyllium Husk, Psyllium Husk Powder, Psyllium Kha-Kha Powder, Gulab Brand Sat-Isabgol and the Material Safety Data Sheet.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product">
+        <img src="https://www.keyurpsyllium.com/images/psyllium_seed.jpg" alt="Psyllium Seed">
+        <h3>Psyllium Seed</h3>
+        <p>Plantago Ovata seed with the product specifications presented by Keyur Industries.</p>
+        <a href="#seed">View details →</a>
+      </article>
+
+      <article class="product">
+        <img src="https://www.keyurpsyllium.com/images/psyllium_husk1.jpg" alt="Psyllium Husk">
+        <h3>Psyllium Husk</h3>
+        <p>Natural soluble-fibre ingredient offered in multiple purity grades.</p>
+        <a href="#husk">View details →</a>
+      </article>
+
+      <article class="product">
+        <div style="height:180px;border-radius:17px;background:linear-gradient(145deg,#edf5e4,#b6d398);display:grid;place-items:center;font-family:'Playfair Display';font-size:28px;color:#123c2b">HUSK<br>POWDER</div>
+        <h3>Husk Powder</h3>
+        <p>Available in multiple purity and mesh specifications for commercial requirements.</p>
+        <a href="#husk-powder">View details →</a>
+      </article>
+
+      <article class="product">
+        <div style="height:180px;border-radius:17px;background:linear-gradient(145deg,#f3f0dd,#c7d49e);display:grid;place-items:center;font-family:'Playfair Display';font-size:25px;color:#123c2b">KHA-KHA<br>POWDER</div>
+        <h3>Kha-Kha Powder</h3>
+        <p>Industrial psyllium by-product/product category shown in the original navigation.</p>
+        <a href="#kha-kha">View details →</a>
+      </article>
+
+      <article class="product">
+        <img src="https://www.keyurpsyllium.com/images/glubbrand.jpg" alt="Gulab Brand Sat-Isabgol">
+        <h3>Gulab Brand®</h3>
+        <p>Sat-Isabgol brand with a domestic marketing network and selected Gulf-market supply.</p>
+        <a href="#gulab">View details →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="kicker">About Keyur Industries</div>
+      <h2>From a long-standing brand to a global psyllium supplier.</h2>
+      <p>
+        Keyur Industries describes itself as a manufacturer, exporter and marketer of
+        psyllium seed, psyllium husk and psyllium husk powder since 1974. The company
+        also has its Gulab Brand® Sat-Isabgol brand, established in 1948.
+      </p>
+      <p>
+        The company states that it supplies the international and domestic markets,
+        including multinational and pharmaceutical customers, with different psyllium
+        purity options.
+      </p>
+      <div class="stats">
+        <div class="stat"><strong>1974</strong><span>Keyur Industries established</span></div>
+        <div class="stat"><strong>1948</strong><span>Gulab Brand® heritage</span></div>
+        <div class="stat"><strong>1600 MT</strong><span>Installed plant capacity stated on current site</span></div>
+      </div>
+    </div>
+    <img class="about-photo" src="https://www.keyurpsyllium.com/images/plant.jpg" alt="Keyur Industries manufacturing plant">
+  </div>
+</section>
+
+<section id="quality">
+  <div class="container quality-grid">
+    <div>
+      <div class="kicker">Quality</div>
+      <div class="section-head" style="margin-bottom:0">
+        <h2>Make the quality story visible.</h2>
+        <p>
+          The current quality page highlights GMP standards, automatic and dust-free
+          manufacturing, continuous quality control, periodic testing, hygiene,
+          plant maintenance and delivery discipline.
+        </p>
+      </div>
+
+      <div class="quality-list">
+        <div class="quality-item"><div>🧪</div><div><b>GMP-based operations</b><span>Manufacturing is described as operating under Good Manufacturing Practices.</span></div></div>
+        <div class="quality-item"><div>🌬️</div><div><b>Automatic & dust-free manufacturing</b><span>Process design is focused on product quality and controlled production.</span></div></div>
+        <div class="quality-item"><div>✓</div><div><b>Continuous quality control</b><span>Quality control is described from seed selection through packing/sterilization.</span></div></div>
+        <div class="quality-item"><div>📦</div><div><b>Hygienic warehousing & packing</b><span>The site highlights hygienic warehouse and packaging practices.</span></div></div>
+      </div>
+    </div>
+    <img class="quality-photo" src="https://www.keyurpsyllium.com/images/psyllium_husk1.jpg" alt="Psyllium husk">
+  </div>
+</section>
+
+<section class="infra" id="infrastructure">
+  <div class="container infra-grid">
+    <img class="infra-photo" src="https://www.keyurpsyllium.com/images/plant.jpg" alt="Keyur Industries plant infrastructure">
+    <div>
+      <div class="kicker">Infrastructure</div>
+      <div class="section-head" style="margin-bottom:0">
+        <h2>Infrastructure designed around consistency.</h2>
+        <p>
+          Keyur Industries' infrastructure page describes a modern manufacturing plant
+          with state-of-the-art technology, sophisticated balancing equipment including
+          an imported KICE Asparator, a maintenance system and GMP-oriented facilities.
+        </p>
+      </div>
+      <div class="capacity">
+        <strong>1,600 MT</strong>
+        <span>Installed capacity stated on the company's infrastructure page.</span>
+      </div>
+      <div class="capacity">
+        <strong>KICE</strong>
+        <span>Imported KICE Asparator mentioned as a key piece of balancing equipment.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exports" id="exports">
+  <div class="container export-grid">
+    <div class="world">
+      <div class="world-label">
+        <strong>From Gujarat to global markets.</strong>
+        <p>Export destinations listed by Keyur Industries include North America, Latin America, Europe, Asia and the Middle East.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="kicker">Exports</div>
+      <div class="section-head" style="margin-bottom:0">
+        <h2>Built for international buyers.</h2>
+        <p>
+          The company's current exports page states successful supply of psyllium products
+          to markets including the USA, Canada, Mexico, Colombia, Germany, Korea, Japan,
+          Singapore, Malaysia, Philippines, China, Israel, UAE, Pakistan and other regions.
+        </p>
+      </div>
+
+      <div class="countries">
+        <span class="country">🇺🇸 USA</span><span class="country">🇨🇦 Canada</span>
+        <span class="country">🇲🇽 Mexico</span><span class="country">🇨🇴 Colombia</span>
+        <span class="country">🇩🇪 Germany</span><span class="country">🇰🇷 Korea</span>
+        <span class="country">🇯🇵 Japan</span><span class="country">🇸🇬 Singapore</span>
+        <span class="country">🇲🇾 Malaysia</span><span class="country">🇵🇭 Philippines</span>
+        <span class="country">🇨🇳 China</span><span class="country">🇮🇱 Israel</span>
+        <span class="country">🇦🇪 UAE</span><span class="country">🇵🇰 Pakistan</span>
+      </div>
+
+      <div class="pack-grid">
+        <div class="pack">HDPE laminated PP + polyliner</div>
+        <div class="pack">Paper bag + polyliner</div>
+        <div class="pack">Super Sacks</div>
+        <div class="pack">Fiber Drum</div>
+        <div class="pack">Gunny Bag</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="seed" style="background:#f8f7ee">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Product Detail</div>
+      <h2>Psyllium Seed</h2>
+      <p>
+        The existing product page identifies Plantago Ovata / Plantago Ispaghula as
+        botanical names and lists seed specifications including colour, moisture,
+        ash and foreign organic matter limits.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="husk">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Product Detail</div>
+      <h2>Psyllium Husk</h2>
+      <p>
+        The current product information describes psyllium husk as the husk of
+        Plantago Ovata seeds and lists purity options of 85%, 95%, 98% and 99%,
+        together with mucilloid, swell-volume, moisture, ash and microbial specifications.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="husk-powder" style="background:#f2f6ed">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Product Detail</div>
+      <h2>Psyllium Husk Powder</h2>
+      <p>
+        The website's product navigation presents Psyllium Husk Powder as a core
+        commercial product, with purity and mesh options described in the company's
+        product materials.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="kha-kha">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Product Detail</div>
+      <h2>Psyllium Kha-Kha Powder</h2>
+      <p>
+        The product is included in the current product range and is also referenced
+        in the company's material safety information under the industrial Kha-Kha Powder category.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="gulab" style="background:#f2f6ed">
+  <div class="container">
+    <div class="export-grid">
+      <img class="quality-photo" src="https://www.keyurpsyllium.com/images/glubbrand.jpg" alt="Gulab Brand Sat-Isabgol">
+      <div>
+        <div class="kicker">Gulab Brand® Sat-Isabgol</div>
+        <div class="section-head" style="margin-bottom:0">
+          <h2>A heritage brand with a modern presentation.</h2>
+          <p>
+            The current site states that Gulab Brand® Sat-Isabgol dates to 1948 and
+            is supplied through a domestic distributor/wholesaler network, with supply
+            also reaching Gulf markets.
+          </p>
+          <p>
+            Listed pack formats include 50g and 100g boxes, 250g and 500g pouches,
+            a 20 × 5g pouch format and 25kg packaging.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="languages">
+  <div class="language-inner">
+    <div>
+      <div class="kicker">Global Website</div>
+      <strong>One website. Multiple languages.</strong>
+    </div>
+    <div class="language-icons">
+      <a title="English" href="#top">🇬🇧</a>
+      <a title="German" href="https://translate.google.com/translate?sl=en&tl=de&u=https://www.keyurpsyllium.com/" target="_blank">🇩🇪</a>
+      <a title="Spanish" href="https://translate.google.com/translate?sl=en&tl=es&u=https://www.keyurpsyllium.com/" target="_blank">🇪🇸</a>
+      <a title="French" href="https://translate.google.com/translate?sl=en&tl=fr&u=https://www.keyurpsyllium.com/" target="_blank">🇫🇷</a>
+      <a title="Italian" href="https://translate.google.com/translate?sl=en&tl=it&u=https://www.keyurpsyllium.com/" target="_blank">🇮🇹</a>
+      <a title="Portuguese" href="https://translate.google.com/translate?sl=en&tl=pt&u=https://www.keyurpsyllium.com/" target="_blank">🇵🇹</a>
+      <a title="Chinese" href="https://translate.google.com/translate?sl=en&tl=zh-CN&u=https://www.keyurpsyllium.com/" target="_blank">🇨🇳</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="inquiry">
+  <div class="cta-box" id="contact">
+    <div>
+      <div class="kicker" style="color:#a9d08c">Start an Inquiry</div>
+      <h2>Let's make it easier for buyers to do business with Keyur.</h2>
+      <p>
+        The redesigned experience puts products, quality, infrastructure, exports and
+        inquiry actions within a few clicks — especially useful for international B2B visitors.
+      </p>
+    </div>
+    <a class="btn primary" href="https://www.keyurpsyllium.com/inquiry.html" target="_blank">Open Inquiry Form ↗</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">KEYUR INDUSTRIES</div>
+      <div class="footer-note">Psyllium Seed • Psyllium Husk • Psyllium Husk Powder</div>
+    </div>
+    <div class="footer-links">
+      <a href="#about">About</a><a href="#products">Products</a><a href="#quality">Quality</a>
+      <a href="#infrastructure">Infrastructure</a><a href="#exports">Exports</a><a href="#inquiry">Inquiry</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.animate(
+        [{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],
+        {duration:650,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'}
+      );
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.08});
+document.querySelectorAll('.product,.quality-item,.stat,.capacity,.country,.pack').forEach(el=>{
+  el.classList.add('reveal'); observer.observe(el);
+});
+</script>
+</body>
+</html>
