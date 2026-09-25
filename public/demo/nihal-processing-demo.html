@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nihal Processing House — Psyllium, Seeds & Spices | Sidhpur, Gujarat</title>
+<meta name="description" content="Nihal Processing House, Sidhpur (Gujarat): processor and supplier of psyllium husk, cumin, fennel, flax, sesame and fenugreek, graded to your purity, mesh and moisture specs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF8F1; --surface:#FFFFFF; --ink:#1F2A22; --muted:#5E6B60; --line:#E6E0D2;
+  --green:#2F5D3A; --green-2:#244A2E; --husk:#D9C49A; --husk-2:#EFE4CB; --accent:#B8742A;
+  --wa:#1FAF55;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:650;line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .15s,background .15s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-1px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-2)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.demo-ribbon{background:var(--ink);color:#F3EEE2;font-size:.78rem;text-align:center;padding:.45rem 12px}
+.demo-ribbon b{color:var(--husk)}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(251,248,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:Fraunces,serif;font-weight:650;font-size:1.15rem}
+.logo-mark{width:36px;height:36px;border-radius:10px;background:var(--green);display:grid;place-items:center}
+.logo small{display:block;font-family:Inter;font-weight:500;font-size:.7rem;color:var(--muted);letter-spacing:.04em}
+.nav-links{display:flex;gap:1.8rem;font-size:.93rem;color:var(--muted);font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+@media(max-width:860px){.nav-links{display:none}.nav-cta span{display:none}}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:.6rem 0 1rem}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero p.lead{font-size:1.1rem;color:var(--muted);max-width:34rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.hero-art{background:var(--husk-2);border-radius:28px;aspect-ratio:1/1;position:relative;overflow:hidden;border:1px solid var(--line)}
+.hero-art svg{width:100%;height:100%;display:block}
+.hero-tag{position:absolute;left:18px;bottom:18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:.7rem .9rem;font-size:.82rem;box-shadow:0 8px 24px rgba(31,42,34,.08)}
+.hero-tag b{display:block;font-size:.95rem}
+@media(max-width:860px){.hero{padding:44px 0 40px}.hero-grid{grid-template-columns:1fr;gap:32px}.hero-art{aspect-ratio:4/3}}
+
+/* strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip-item{padding:22px 18px;border-right:1px solid var(--line)}
+.strip-item:last-child{border-right:0}
+.strip-item b{display:block;font-size:.98rem}
+.strip-item span{font-size:.85rem;color:var(--muted)}
+@media(max-width:860px){.strip-grid{grid-template-columns:1fr 1fr}.strip-item:nth-child(2){border-right:0}.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+section{padding:80px 0}
+.sec-head{max-width:40rem;margin-bottom:2.4rem}
+.sec-head p{color:var(--muted);margin-top:.6rem}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:.6rem;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 14px 34px rgba(31,42,34,.08);transform:translateY(-2px)}
+.card .ico{width:56px;height:56px;border-radius:16px;display:grid;place-items:center}
+.card h3{font-size:1.25rem}
+.card p{font-size:.92rem;color:var(--muted);flex:1}
+.card .ask{font-size:.88rem;font-weight:600;color:var(--green);display:inline-flex;gap:.35rem;align-items:center}
+.card.feature{grid-column:span 1;background:var(--green);color:#fff;border-color:var(--green)}
+.card.feature p{color:#D7E3D8}
+.card.feature .ask{color:var(--husk)}
+@media(max-width:860px){.products{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.products{grid-template-columns:1fr}}
+
+/* specs */
+.specs{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.specs-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px}
+table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:460px}
+th,td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid var(--line)}
+th{background:var(--husk-2);font-weight:600;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.note{font-size:.8rem;color:var(--muted);margin-top:.8rem}
+.checks{list-style:none;display:grid;gap:.7rem;margin-top:1.4rem}
+.checks li{display:flex;gap:.6rem;align-items:flex-start}
+.checks li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+@media(max-width:860px){.specs-grid{grid-template-columns:1fr;gap:28px}}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 16px;counter-increment:s}
+.step::before{content:counter(s,decimal-leading-zero);font-family:Fraunces,serif;font-size:1.4rem;color:var(--accent);display:block;margin-bottom:.3rem}
+.step b{display:block;font-size:.95rem}
+.step span{font-size:.82rem;color:var(--muted)}
+@media(max-width:960px){.steps{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr 1fr}}
+
+/* inquiry */
+.inquiry{background:var(--green);color:#fff;border-radius:28px;padding:48px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.inquiry h2{color:#fff}
+.inquiry p{color:#D7E3D8}
+.contact-list{list-style:none;margin-top:1.6rem;display:grid;gap:1rem;font-size:.95rem}
+.contact-list small{display:block;color:var(--husk);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+form{background:var(--surface);color:var(--ink);border-radius:20px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form label{font-size:.8rem;font-weight:600;color:var(--muted);display:grid;gap:.35rem}
+form .full{grid-column:1/-1}
+input,select,textarea{font:inherit;font-size:.95rem;padding:.7rem .8rem;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green)}
+textarea{min-height:90px;resize:vertical}
+form .btn{justify-content:center;width:100%}
+@media(max-width:860px){.inquiry{grid-template-columns:1fr;padding:28px 20px}form{grid-template-columns:1fr;padding:18px}}
+
+.hero-grid>*,.specs-grid>*,.inquiry>*,form>*{min-width:0}
+footer{padding:36px 0 90px;font-size:.85rem;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);padding-top:24px}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 26px rgba(31,175,85,.4)}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">Demo concept by <b>Mayur Parmar</b>, web developer, Sidhpur — not the official site of Nihal Processing House</div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo">
+        <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21c0-7 3-12 8-15-1 7-4 12-8 15zM12 21C12 14 9 9 4 6c1 7 4 12 8 15z" fill="#D9C49A"/></svg></span>
+        <span>Nihal Processing House<small>SIDHPUR · GUJARAT · INDIA</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#products">Products</a><a href="#specs">Specifications</a><a href="#process">Process</a><a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-wa nav-cta" href="https://wa.me/919825380373?text=Hello%20Nihal%20Processing%20House%2C%20I%20would%20like%20a%20quote." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+        <span>Get a quote</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Psyllium · Seeds · Spices</div>
+      <h1>Processed in Sidhpur, <em>graded to your spec.</em></h1>
+      <p class="lead">Nihal Processing House supplies psyllium husk, cumin, fennel, flax, sesame and fenugreek, matched to your contract for purity, mesh size and moisture.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="https://wa.me/919825380373?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20psyllium%20husk." target="_blank" rel="noopener">Inquire on WhatsApp</a>
+        <a class="btn btn-ghost" href="#products">View products</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <pattern id="husk" width="14" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)">
+            <ellipse cx="7" cy="5" rx="5.5" ry="2.2" fill="#E9DAB6" stroke="#CDB47F" stroke-width=".6"/>
+          </pattern>
+          <pattern id="cumin" width="12" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+            <ellipse cx="6" cy="4" rx="4.6" ry="1.5" fill="#8A6A3E"/>
+          </pattern>
+          <pattern id="fennel" width="12" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+            <ellipse cx="6" cy="4" rx="4.8" ry="1.7" fill="#9BA85E"/>
+          </pattern>
+          <pattern id="sesame" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+            <ellipse cx="4.5" cy="4.5" rx="2.6" ry="1.7" fill="#F7F1E3" stroke="#D9CBAA" stroke-width=".5"/>
+          </pattern>
+          <pattern id="flax" width="10" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-10)">
+            <ellipse cx="5" cy="4" rx="3.4" ry="1.9" fill="#7A4A2A"/>
+          </pattern>
+        </defs>
+        <rect width="400" height="400" fill="#EFE4CB"/>
+        <circle cx="205" cy="190" r="118" fill="#FFFFFF" opacity=".55"/>
+        <path d="M95 250 Q205 90 315 250 Z" fill="url(#husk)"/>
+        <path d="M40 320 Q110 215 180 320 Z" fill="url(#cumin)"/>
+        <path d="M220 320 Q290 215 360 320 Z" fill="url(#fennel)"/>
+        <path d="M150 345 Q205 270 260 345 Z" fill="url(#sesame)"/>
+        <path d="M285 150 Q325 95 365 150 Z" fill="url(#flax)"/>
+        <rect x="0" y="330" width="400" height="70" fill="#E3D3AE"/>
+      </svg>
+      <div class="hero-tag"><b>Psyllium husk</b>Purity · Mesh · Moisture to contract</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap strip-grid">
+    <div class="strip-item"><b>Sidhpur, Gujarat</b><span>India's psyllium belt</span></div>
+    <div class="strip-item"><b>Specs to contract</b><span>Purity, mesh size, moisture</span></div>
+    <div class="strip-item"><b>Six product lines</b><span>Psyllium, seeds & spices</span></div>
+    <div class="strip-item"><b>Trade & household</b><span>Export, hotels, restaurants</span></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Products</div>
+      <h2>What we process and supply</h2>
+      <p>Cleaned, graded and packed at our Sidhpur unit. Tap any product to ask for the current spec sheet and price.</p>
+    </div>
+    <div class="products">
+      <a class="card feature" href="https://wa.me/919825380373?text=Please%20share%20spec%20sheet%20and%20price%20for%20Psyllium%20Husk." target="_blank" rel="noopener">
+        <div class="ico" style="background:rgba(255,255,255,.12)"><svg width="30" height="30" viewBox="0 0 30 30"><ellipse cx="15" cy="15" rx="11" ry="5" fill="#D9C49A" transform="rotate(-25 15 15)"/></svg></div>
+        <h3>Psyllium Husk</h3>
+        <p>Husk and husk powder in multiple purity grades and mesh sizes. Our core product line.</p>
+        <span class="ask">Ask for spec sheet →</span>
+      </a>
+      <a class="card" href="https://wa.me/919825380373?text=Please%20share%20spec%20sheet%20and%20price%20for%20Cumin%20Seeds." target="_blank" rel="noopener">
+        <div class="ico" style="background:#F1E6D3"><svg width="30" height="30" viewBox="0 0 30 30"><ellipse cx="15" cy="15" rx="11" ry="3.4" fill="#8A6A3E" transform="rotate(30 15 15)"/></svg></div>
+        <h3>Cumin Seeds</h3>
+        <p>Cleaned and sorted cumin for spice trade, hotels and restaurants.</p>
+        <span class="ask">Ask for spec sheet →</span>
+      </a>
+      <a class="card" href="https://wa.me/919825380373?text=Please%20share%20spec%20sheet%20and%20price%20for%20Fennel%20Seeds." target="_blank" rel="noopener">
+        <div class="ico" style="background:#EDF0DC"><svg width="30" height="30" viewBox="0 0 30 30"><ellipse cx="15" cy="15" rx="11" ry="3.8" fill="#9BA85E" transform="rotate(-35 15 15)"/></svg></div>
+        <h3>Fennel Seeds</h3>
+        <p>Graded fennel for culinary, mouth-freshener and processing use.</p>
+        <span class="ask">Ask for spec sheet →</span>
+      </a>
+      <a class="card" href="https://wa.me/919825380373?text=Please%20share%20spec%20sheet%20and%20price%20for%20Flax%20Seeds." target="_blank" rel="noopener">
+        <div class="ico" style="background:#F1E3D8"><svg width="30" height="30" viewBox="0 0 30 30"><ellipse cx="15" cy="15" rx="8" ry="4.6" fill="#7A4A2A" transform="rotate(-10 15 15)"/></svg></div>
+        <h3>Flax Seeds</h3>
+        <p>Whole flax seeds, cleaned for food and health-product manufacturers.</p>
+        <span class="ask">Ask for spec sheet →</span>
+      </a>
+      <a class="card" href="https://wa.me/919825380373?text=Please%20share%20spec%20sheet%20and%20price%20for%20Sesame%20Seeds." target="_blank" rel="noopener">
+        <div class="ico" style="background:#F6F1E6"><svg width="30" height="30" viewBox="0 0 30 30"><ellipse cx="15" cy="15" rx="7" ry="4.6" fill="#FBF7EC" stroke="#CDBB93" stroke-width="1.4" transform="rotate(15 15 15)"/></svg></div>
+        <h3>Sesame Seeds</h3>
+        <p>Sesame seeds cleaned and sorted for trade and food processing.</p>
+        <span class="ask">Ask for spec sheet →</span>
+      </a>
+      <a class="card" href="https://wa.me/919825380373?text=Please%20share%20spec%20sheet%20and%20price%20for%20Fenugreek%20products." target="_blank" rel="noopener">
+        <div class="ico" style="background:#F5EAD0"><svg width="30" height="30" viewBox="0 0 30 30"><rect x="9" y="10" width="12" height="10" rx="3" fill="#C9962F" transform="rotate(12 15 15)"/></svg></div>
+        <h3>Fenugreek Products</h3>
+        <p>Fenugreek seeds and related products for spice and wellness markets.</p>
+        <span class="ask">Ask for spec sheet →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section id="specs" class="specs">
+  <div class="wrap specs-grid">
+    <div>
+      <div class="eyebrow">Specifications</div>
+      <h2>Psyllium husk, graded to your contract</h2>
+      <p style="color:var(--muted);margin-top:.6rem">Export buyers work to exact numbers. Every lot is processed and checked against the purity, mesh and moisture figures you order.</p>
+      <ul class="checks">
+        <li>Purity grade matched to order</li>
+        <li>Mesh size for husk and powder</li>
+        <li>Moisture checked before packing</li>
+        <li>Packing to buyer requirement</li>
+      </ul>
+    </div>
+    <div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Grade</th><th>Purity</th><th>Form</th><th>Typical use</th></tr></thead>
+          <tbody>
+            <tr><td><b>Premium</b></td><td>99%</td><td>Husk</td><td>Pharma, nutraceutical</td></tr>
+            <tr><td><b>Standard</b></td><td>98%</td><td>Husk</td><td>Health food, retail packs</td></tr>
+            <tr><td><b>Commercial</b></td><td>95%</td><td>Husk</td><td>Food processing</td></tr>
+            <tr><td><b>Industrial</b></td><td>85%</td><td>Husk</td><td>Feed, industrial</td></tr>
+            <tr><td><b>Powder</b></td><td>95–99%</td><td>40–100 mesh</td><td>Capsules, blends</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Demo note: typical industry grades shown. Replace with Nihal's own spec sheet before going live.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Process</div>
+      <h2>From raw seed to dispatched lot</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><b>Sourcing</b><span>Raw seed from North Gujarat</span></div>
+      <div class="step"><b>Cleaning</b><span>Dust, stone and foreign matter removed</span></div>
+      <div class="step"><b>Processing</b><span>De-husking and milling</span></div>
+      <div class="step"><b>Grading</b><span>Purity and mesh sorted</span></div>
+      <div class="step"><b>Packing</b><span>To buyer's pack size</span></div>
+      <div class="step"><b>Dispatch</b><span>Domestic and export</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY / CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="inquiry">
+      <div>
+        <div class="eyebrow" style="color:var(--husk)">Get a quote</div>
+        <h2>Tell us what you need</h2>
+        <p style="margin-top:.6rem">Send product, quantity and destination. Your inquiry opens directly in WhatsApp.</p>
+        <ul class="contact-list">
+          <li><small>Address</small>'Goverdhan', B S Road, Nr. LIC Office, Sidhpur 384151, Gujarat, India</li>
+          <li><small>WhatsApp / Mobile</small><a href="tel:+919825380373">+91 98253 80373</a></li>
+          <li><small>Office</small><a href="tel:+912767220663">+91 2767 220663</a></li>
+          <li><small>Email</small><a href="mailto:wdheeraj@gmail.com">wdheeraj@gmail.com</a></li>
+        </ul>
+      </div>
+      <form id="q">
+        <label>Your name<input name="name" required placeholder="Full name"></label>
+        <label>Company<input name="company" placeholder="Company name"></label>
+        <label>Country<input name="country" placeholder="e.g. USA, UAE"></label>
+        <label>Product
+          <select name="product">
+            <option>Psyllium Husk</option><option>Psyllium Husk Powder</option><option>Cumin Seeds</option>
+            <option>Fennel Seeds</option><option>Flax Seeds</option><option>Sesame Seeds</option><option>Fenugreek Products</option>
+          </select>
+        </label>
+        <label class="full">Quantity<input name="qty" placeholder="e.g. 1 x 20ft container, 5 MT"></label>
+        <label class="full">Specs / message<textarea name="msg" placeholder="Purity, mesh size, packing, delivery port…"></textarea></label>
+        <div class="full"><button class="btn btn-wa" type="submit">Send inquiry on WhatsApp</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© Nihal Processing House, Sidhpur · Sister concern: Goverdhan Corporation</span>
+    <span>Demo concept by Mayur Parmar</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919825380373" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+</a>
+
+<script>
+document.getElementById('q').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = new FormData(this), lines = [
+    'New inquiry from website',
+    'Name: ' + (f.get('name')||''),
+    'Company: ' + (f.get('company')||''),
+    'Country: ' + (f.get('country')||''),
+    'Product: ' + (f.get('product')||''),
+    'Quantity: ' + (f.get('qty')||''),
+    'Specs: ' + (f.get('msg')||'')
+  ];
+  window.open('https://wa.me/919825380373?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+});
+</script>
+</body>
+</html>
